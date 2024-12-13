@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Case 1 - Employees</title>
+	<meta charset="utf-8" />
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link href="/lib/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="css/employee.css" rel="stylesheet"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-primary text-white">
+		<a class="navbar-brand mx-3" href="#">Case #1</a>
+		<button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse " id="navbarContent">
+			<ul class="navbar-nav me-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/home.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active"
+					   href="/employee.html"
+					   data-bs-target="#theModal">Employee</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"
+					   href="/calls.html"
+					   data-bs-target="#theModal">Call</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"
+					   href="/report.html"
+					   data-bs-target="#theModal">Report</a>
+				</li>
+			</ul>
+			<form>
+				<input class="form-control"
+					   type="search"
+					   placeholder="Enter Last Name"
+					   id="srch"
+					   aria-label="Search"
+					   style="width:10vw; margin-right:5vw;" />
+			</form>
+		</div>
+	</nav>
+
+	<div class="container p-auto m-auto">
+		<div class="row" style="width:100%; margin: 0;">
+			<img class="col-12" src="../img/helpdesk.png" style="margin:auto; width:auto; margin-top: 2%;" alt="Help Desk">
+		</div>
+		<div class="row" style="margin: auto;">
+			<div class="col-12 text-center" style="font-weight:bold; font-size:x-large;">Employees</div>
+		</div>
+		<div class="row" style="margin-bottom:2%;">
+			<div class="col-12 text-center" style="font-weight:normal; font-size:large;">Helpdesk v1.0</div>
+		</div>
+		<div class="justify-content-center align-items-center row mt-3 ml-1 mb-3">
+			<div class="list-group col-10" id="employeeList" style="height:100%;">
+			</div>
+		</div>
+
+	</div>
+	<script src="/lib/js/jquery.min.js"></script>
+	<script src="lib/js/jquery.validate.min.js"></script>
+	<script src="/lib/js/bootstrap.min.js"></script>
+	<script src="/js/employee.js"></script>
+
+	<footer class="container m-auto p-auto mt-auto">
+		<div class="border-top border-dark">
+			<div class="text-left p-3 m-1 mt-a">
+				© Miracle Alokwe 2024
+			</div>
+		</div>
+	</footer>
+
+
+	<form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+		<div class="modal fade" id="theModal" data-bs-backdrops="static"
+			 data-bs-keyboard="false" tabindex="-1" aria-labelledby="theModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<!--sets width and margin for the modal-->
+				<div class="modal-content">
+					<div class="modal-header" style="width: auto; display: flex; justify-content: center; align-items: center;">
+						<img class="col-12" src="../img/helpdesk.png" alt="Help Desk" style="width: 12%;">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!--start of employee lookup card-->
+						<!--remember to link the lookup script for this page-->
+						<div class="mx-2 my-2">
+							<div class="card">
+								<div class="card-header bg-primary text-center text-white" id="cardheader" style="width: auto; display: flex; justify-content: center;">
+									Add Employee
+								</div>
+								<div class="card-body p-0 ml-1">
+									<div class="row">
+										<div class="col-4">Title:</div>
+										<div class="col-8">
+											<input type="text"
+												   placeholder="enter title"
+												   id="TextBoxTitle"
+												   name="TextBoxTitle"
+												   class="form-control" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-4">First:</div>
+										<div class="col-8">
+											<input type="text"
+												   placeholder="enter first name"
+												   id="TextBoxFirst"
+												   name="TextBoxFirst"
+												   class="form-control" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-4">Surname:</div>
+										<div class="col-8">
+											<input type="text"
+												   placeholder="enter surname"
+												   id="TextBoxSurname"
+												   name="TextBoxSurname"
+												   class="form-control" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-4">Email:</div>
+										<div class="col-8">
+											<input type="text"
+												   placeholder="enter email"
+												   id="TextBoxEmail"
+												   name="TextBoxEmail"
+												   class="form-control" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-4">Phone Number:</div>
+										<div class="col-8">
+											<input type="text"
+												   placeholder="enter phone number"
+												   id="TextBoxPhone"
+												   name="TextBoxPhone"
+												   class="form-control" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-4">Department:</div>
+										<div class="col-8"><select id="ddlDepartments" name="ddlDepartments" class="form-control"></select></div>
+									</div>
+									<div class="row mt-3">
+										<div class="col-4">Picture:</div>
+										<div class="col-8" id="imageHolder"></div>
+									</div>
+								</div>
+								<div class="row border m-2 p-2">
+									<label for="file">Choose Different Picture?</label>
+									<input type="file" id="uploader" class="text-center btn btn-outline-secondary" />
+									<div id="uploadstatus" class="text-left"></div>
+								</div>
+
+
+								<div class="card-footer text-center">
+									<input type="button"
+										   value="Update"
+										   id="actionbutton"
+										   class="button bg-warning" />
+									<input type="button"
+										   value="delete"
+										   id="deletebutton"
+										   class="button bg-danger" />
+									<div id="modalstatus" class="text-left mt-3 mb-2">Update/Delete data</div>
+
+									<div class="alert alert-danger fade show" role="alert" id="dialog"
+										 style="width:80%; margin-top:2vh; margin-left: 10%;">
+										Are you sure you want to delete this Employee?
+										<input type="button" class="btn btn-secondary mt-3" value="Yes" id="yesbutton" />
+										<input type="button" class="btn btn-secondary mt-3" value="No" id="nobutton" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--end of card-->
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</form>
+
+
+
+
+</body>
+
+
+
+
+
+</html>

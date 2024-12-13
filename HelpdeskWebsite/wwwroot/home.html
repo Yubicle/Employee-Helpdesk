@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Case 1 - Home</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/employee.css" rel="stylesheet"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-primary">
+		<a class="navbar-brand mx-3" href="#">Case #1</a>
+		<button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarContent">
+			<ul class="navbar-nav mx-3">
+				<li class="nav-item">
+					<a class="nav-link active" href="/home.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"
+					   href="/employee.html#theModal"
+					   data-bs-target="#theModal">Employee</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"
+					   href="/calls.html"
+					   data-bs-target="#theModal">Call</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"
+					   href="/report.html"
+					   data-bs-target="#theModal">Report</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<script src="/lib/js/jquery.min.js"></script>
+	<script src="/lib/js/bootstrap.min.js"></script>
+	<script src="/js/employeelookup.js"></script>
+
+
+    <div class="container p-auto m-auto">
+        <div class="row" style="width: 100%; margin:0;">
+            <img class="col-12" src="../img/helpdesk.png" style="width:auto; margin:auto; margin-top: 2%;" alt="Help Desk">
+        </div>
+        <div class="row">
+            <div class="col-12 text-center" style="font-weight:bold; font-size:x-large;">Help Desk</div>
+        </div>
+        <div class="row" style="margin-bottom:50vh;">
+            <div class="col-12 text-center" style="font-weight:normal; font-size:large;">v1.0</div>
+        </div>
+    </div>
+
+
+	<div class="modal fade" id="theModal" data-bs-backdrops="static"
+		 data-bs-keyboard="false" tabindex="-1" aria-labelledby="theModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<!--sets width and margin for the modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="theModalLabel">Lab 7a</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!--start of employee lookup card-->
+					<!--remember to link the lookup script for this page-->
+					<div class="mx-2 my-2">
+						<div class="card">
+							<div class="card-header text-center">
+								Employee Information
+							</div>
+							<div class="card-body p-0 ml-1">
+								<div class="row">
+									<div class="col-3 text-right" style="font-weight:bold;">Title:</div>
+									<div class="col-3 text-left" id="title"></div>
+									<div class="col-3 text-right" style="font-weight:bold;">First:</div>
+									<div class="col-3 text-left" id="firstname"></div>
+								</div>
+								<div class="row">
+									<div class="col-3 text-right" style="font-weight:bold;">Phone:</div>
+									<div class="col-5 text-left" id="phone"></div>
+								</div>
+								<div class="row">
+									<div class="col-3 text-right" style="font-weight:bold;">Email:</div>
+									<div class="col-5 text-left" id="email"></div>
+								</div>
+								<div class="row">
+									<div class="col-3" style="font-weight:bold">Last:</div>
+									<div class="col-8">
+										<input type="text" placeholder="enter last name" id="TextBoxLastname" class="form-control my-2" />
+									</div>
+								</div>
+							</div>
+							<div class="card-footer text-center">
+								<input type="button" value="Find Employee" id="getbutton" />
+								<div id="status" class="text-left mt-3 mb-2"></div>
+							</div>
+						</div>
+					</div> <!--end of card-->
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	
+	<footer class="container m-auto p-auto mt-3">
+		<div class="border-top border-dark">
+			<div class="text-left p-3 m-1 mt-auto">
+				©  Miracle Alokwe 2024
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

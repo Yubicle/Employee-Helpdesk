@@ -1,0 +1,59 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather');
+
+#status {
+    font-family: Verdana;
+    font-size: large;
+}
+
+button.list-group-item {
+    color: black;
+    font-family: 'Montserrat', Verdana;
+}
+
+list-group.list-group-item{
+    color: white;
+}
+
+div.error {
+    color: red;
+    font-style: italic;
+    padding: .5em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    left: 200px;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+nav.navbar{
+    color: white;   
+}
+
+body{
+    font-family: 'Montserrat', Verdana;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 2rem;
+    border-color: black;
+}
+
+/*.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: black;
+    border-bottom: 5px;
+}*/
+
+.btn:hover {
+    color: #fff;
+    background-color: royalblue;
+    border-color: black;
+}
